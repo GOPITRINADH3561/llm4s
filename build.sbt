@@ -101,8 +101,12 @@ lazy val commonSettings = Seq(
   libraryDependencies ++= List(
     "com.lihaoyi"   %% "upickle"         % "4.2.1",
     "ch.qos.logback" % "logback-classic" % "1.5.18",
-    "org.scalatest" %% "scalatest"       % "3.2.19" % Test
-  )
+    "org.scalatest"     %% "scalatest"       % "3.2.19" % Test,
+    "com.softwaremill.sttp.client4" %% "core"         % "4.0.0-M10",
+    "com.softwaremill.sttp.client4" %% "circe"        % "4.0.0-M10",
+    "io.circe"                      %% "circe-core"   % "0.14.6",
+    "io.circe"                      %% "circe-generic"% "0.14.6",
+    "io.circe"                      %% "circe-parser" % "0.14.6"  )
 )
 
 lazy val root = (project in file("."))
@@ -116,7 +120,7 @@ lazy val root = (project in file("."))
       "com.anthropic"      % "anthropic-java"  % "1.1.0",
       "com.knuddels"       % "jtokkit"         % "1.1.0",
       "com.lihaoyi"       %% "requests"        % "0.9.0",
-      "org.java-websocket" % "Java-WebSocket"  % "1.5.3",
+      "org.java-websocket" % "Java-WebSocket"  % "1.5.3"
     )
   )
 
