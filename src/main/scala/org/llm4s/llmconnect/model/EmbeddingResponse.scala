@@ -10,8 +10,8 @@ package org.llm4s.llmconnect.model
  * @param usage Optional usage statistics (e.g., token count).
  */
 case class EmbeddingResponse(
-                              embeddings: Seq[Seq[Double]],
-                              model: Option[String] = None,
-                              objectType: Option[String] = None,
-                              usage: Option[Map[String, Int]] = None
-                            )
+  embeddings: Seq[Seq[Double]],
+  model: Option[String] = None,
+  objectType: Option[String] = None,
+  usage: Option[Map[String, Int]] = None
+)

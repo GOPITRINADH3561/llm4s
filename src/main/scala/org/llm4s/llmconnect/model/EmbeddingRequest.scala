@@ -8,6 +8,6 @@ package org.llm4s.llmconnect.model
  * @param model The model name (e.g., "text-embedding-3-small", "voyage-2").
  */
 case class EmbeddingRequest(
-                             input: Seq[String],
-                             model: String
-                           )
+  input: Seq[String],
+  model: String
+)

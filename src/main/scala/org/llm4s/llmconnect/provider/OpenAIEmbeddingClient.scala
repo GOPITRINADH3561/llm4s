@@ -1,10 +1,8 @@
 package org.llm4s.llmconnect.provider
 
 import sttp.client4._
-import sttp.client4.circe._
-import io.circe._
 import io.circe.parser._
-import io.circe.generic.auto._
+import io.circe.Json
 
 import org.llm4s.llmconnect.config.EmbeddingConfig
 import org.llm4s.llmconnect.model._

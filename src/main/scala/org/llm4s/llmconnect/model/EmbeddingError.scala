@@ -9,7 +9,7 @@ package org.llm4s.llmconnect.model
  * @param provider Name of the provider ("openai", "voyage", etc.)
  */
 case class EmbeddingError(
-                           code: Option[String],
-                           message: String,
-                           provider: String
-                         )
+  code: Option[String],
+  message: String,
+  provider: String
+)

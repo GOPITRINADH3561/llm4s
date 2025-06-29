@@ -1,13 +1,11 @@
 package org.llm4s.llmconnect.provider
 
 import sttp.client4._
-import sttp.client4.circe._
 import io.circe._
 import io.circe.parser._
-import io.circe.generic.auto._
 
 import java.util.Base64
-import java.nio.{ByteBuffer, ByteOrder}
+import java.nio.{ ByteBuffer, ByteOrder }
 import scala.util.Try
 
 import org.llm4s.llmconnect.config.EmbeddingConfig
@@ -24,19 +22,18 @@ object VoyageAIEmbeddingClient {
   /**
    * Decode base64-encoded float32 (little-endian) string into sequence of doubles.
    */
-  private def decodeBase64ToFloatArray(base64Str: String): Seq[Double] = {
+  private def decodeBase64ToFloatArray(base64Str: String): Seq[Double] =
     Try {
-      val bytes = Base64.getDecoder.decode(base64Str)
+      val bytes  = Base64.getDecoder.decode(base64Str)
       val buffer = ByteBuffer.wrap(bytes).order(ByteOrder.LITTLE_ENDIAN)
-      val count = bytes.length / 4
+      val count  = bytes.length / 4
       (0 until count).map(_ => buffer.getFloat.toDouble)
     }.getOrElse(Seq.empty)
-  }
 
   def getEmbeddings(request: EmbeddingRequest): Either[EmbeddingError, EmbeddingResponse] = {
     val payload: Json = Json.obj(
-      "input" -> Json.arr(request.input.map(Json.fromString): _*),
-      "model" -> Json.fromString(EmbeddingConfig.voyageModel),
+      "input"           -> Json.arr(request.input.map(Json.fromString): _*),
+      "model"           -> Json.fromString(EmbeddingConfig.voyageModel),
       "encoding_format" -> Json.fromString("base64")
     )
 
