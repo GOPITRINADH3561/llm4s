@@ -10,6 +10,6 @@ package org.llm4s.llmconnect.model
  * @param usage --> Optional usage statistics (e.g., token count).
  */
 case class EmbeddingResponse(
-                              vectors: Seq[Seq[Double]],
-                              metadata: Map[String, String] = Map()
-                            )
+  vectors: Seq[Seq[Double]],
+  metadata: Map[String, String] = Map()
+)
