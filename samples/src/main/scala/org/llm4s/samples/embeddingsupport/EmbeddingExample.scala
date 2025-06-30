@@ -1,31 +1,34 @@
 package org.llm4s.samples.embeddingsupport
 
 import org.llm4s.llmconnect.EmbeddingClient
-import org.llm4s.llmconnect.model._
+import org.llm4s.llmconnect.config.{EmbeddingConfig, EmbeddingModelConfig}
+import org.llm4s.llmconnect.model.EmbeddingRequest
 
 object EmbeddingExample extends App {
 
-  val inputs = Seq("Hello world!", "Gopi is working on GSoC")
-
-  println("OpenAI Embeddings:")
-  EmbeddingClient.getOpenAIEmbedding(inputs) match {
-    case Right(response) =>
-      println(s"Received ${response.embeddings.length} vectors:")
-      response.embeddings.foreach { vec =>
-        println("→ " + vec.take(5).mkString(", ") + ", ...")
-      }
-    case Left(error) =>
-      println(s"OpenAI embedding error: ${error.message}")
+  val activeProvider = EmbeddingConfig.activeProvider.toLowerCase
+  val model = activeProvider match {
+    case "openai" =>
+      EmbeddingModelConfig(EmbeddingConfig.openAI.model, 1536) 
+      EmbeddingModelConfig(EmbeddingConfig.voyage.model, 1024)
+    case other =>
+      throw new RuntimeException(s"Unsupported provider: $other")
   }
 
-  println("\nVoyageAI Embeddings:")
-  EmbeddingClient.getVoyageEmbedding(inputs) match {
+  val inputText = Seq("Gopi is contributing to Google Summer of Code 2025.")
+
+  val request = EmbeddingRequest(inputText, model)
+  val provider = EmbeddingClient.fromConfig()
+
+  provider.embed(request) match {
     case Right(response) =>
-      println(s"Received ${response.embeddings.length} vectors:")
-      response.embeddings.foreach { vec =>
-        println("→ " + vec.take(5).mkString(", ") + ", ...")
+      println(s"Embedding received from [$activeProvider]:")
+      response.vectors.zipWithIndex.foreach { case (vec, i) =>
+        println(s"[$i] -> [${vec.mkString(", ")}]")
       }
+
     case Left(error) =>
-      println(s"VoyageAI embedding error: ${error.message}")
+      println(s"Embedding failed from [${error.provider}]: ${error.message}")
+      error.code.foreach(code => println(s"Status code: $code"))
   }
 }

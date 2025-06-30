@@ -1,0 +1,170 @@
+[33m5b296ff[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/embedding-support[m[33m, [m[1;31morigin/feature/embedding-support[m[33m)[m refactor
+[33m2c8dfca[m Final refactor
+[33mb5bdabe[m format code, fixup Scala 3 compatibility
+[33mdd4c35d[m Update EmbeddingExample.scala
+[33m56dd9c2[m Add OpenAI embedding support with working sample
+[33me5adf56[m Add precommit hooks (#88)
+[33m94af134[m Add more documentation, fix compilation bugs and reformat with scalaFmt (#86)
+[33mbf64667[m Clean up imports in `RunnerMain.scala` and `WorkspaceAgentInterfaceImplTest.scala`: (#85)
+[33m54c1693[m Refactor `build.sbt`: (#84)
+[33mbc1b86e[m[33m ([m[1;31mupstream/main[m[33m, [m[1;31mupstream/HEAD[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Basic text tracing implementation (#77)
+[33mae32688[m Moved away from hand crafting json payloads - instead using uPickle to do the heavy lifting (#81)
+[33m9be1821[m Add Image Generation API (#76)
+[33m8e656f9[m Add MCP connector (#70)
+[33mcefb3cb[m Update README.md
+[33m08cff22[m Merge pull request #79 from llm4s/kannupriyakalra-twitter
+[33m3dc2df9[m[33m ([m[1;31mupstream/kannupriyakalra-twitter[m[33m)[m created Mastodon post
+[33m129308c[m created blue sky post
+[33m4463842[m Reformated GSoC section
+[33m72bf0e6[m reformatted GSoC 2025: Funded Project Ideas from LLM4S
+[33m35183a7[m added gopi worklog n blog links
+[33m88b93a9[m fixed reddit post issue
+[33md52a783[m created reddit post for dallas talk
+[33ma03bdf2[m fixed twitter post issue
+[33mdd36049[m Merge pull request #78 from llm4s/kannupriyakalra-dallas-1
+[33m66ad9bb[m[33m ([m[1;31mupstream/kannupriyakalra-dallas-1[m[33m)[m Add files via upload
+[33m6c1ea8f[m updated twitter post
+[33m974c924[m created twitter post
+[33m9f9dd85[m dallas linkedin announcement
+[33m27af8a7[m Update README.md
+[33me627fa5[m added dallas image in read me
+[33me867b1d[m Add files via upload
+[33mf4359bd[m dallas talk
+[33ma2c9a7f[m Update README.md
+[33m5af1000[m Merge pull request #72 from elvankonukseven/patch-4
+[33mdbdefaf[m Merge pull request #71 from elvankonukseven/patch-3
+[33m5b6b69f[m Update README.md
+[33m0659379[m Update README.md
+[33m0b3acb4[m Merge pull request #69 from llm4s/kannupriyakalra-talkImages
+[33mec54096[m[33m ([m[1;31mupstream/kannupriyakalra-talkImages[m[33m)[m Add LLM4S global talk images and launch visuals to Getting Started section
+[33m5f6b853[m Merge pull request #68 from llm4s/kannupriyakalra-scaladays
+[33m02706f7[m[33m ([m[1;31mupstream/kannupriyakalra-scaladays[m[33m)[m Fix Minor Typos & Formatting
+[33m437976b[m Update Scala Days 2025 location details in event table
+[33m16b97ab[m Merge pull request #67 from llm4s/talkAssets
+[33m4a6bc6b[m[33m ([m[1;31mupstream/talkAssets[m[33m)[m chore: move talk images to 'talk' folder
+[33m481ab40[m Merge pull request #66 from llm4s/kannupriyakalra-talks-assets
+[33m834d9c6[m[33m ([m[1;31mupstream/kannupriyakalra-talks-assets[m[33m)[m LLM4S Talk images from various conferences
+[33mb700dda[m Merge pull request #65 from llm4s/asset
+[33m7c552a1[m[33m ([m[1;31mupstream/asset[m[33m)[m added details for Scala Days 2025
+[33m59409dc[m chore: move GSoC images to 'gsoc_assets' folder
+[33m97eaedb[m Merge pull request #64 from llm4s/kannupriyakalra-gsoc-1
+[33m9fb7d47[m[33m ([m[1;31mupstream/kannupriyakalra-gsoc-1[m[33m)[m Explore Past GSoC Projects with Scala Center
+[33m2ed5e7d[m GSoC_website_LLM4S - Implement an agentic toolkit for Large Language Models
+[33m685626c[m LLM4S GSoC 2025 dashboard
+[33m49d7b34[m Cracking GSoC with LLM4S
+[33m1c956ba[m Merge pull request #63 from llm4s/kannupriyakalra-tracing
+[33m3d9d92b[m[33m ([m[1;31mupstream/kannupriyakalra-tracing[m[33m)[m Added LLM4S - Tracing support blog and work log links
+[33m4d0163b[m Merge pull request #62 from llm4s/kannupriyakalra-dallas
+[33m93009eb[m[33m ([m[1;31mupstream/kannupriyakalra-dallas[m[33m)[m added details for upcoming llm4s talk in dallas,tx, usa
+[33ma9bdffa[m Merge pull request #61 from AnshumanAI/main
+[33m5e981c5[m Update README.md
+[33m65ada5f[m[33m ([m[1;33mtag: [m[1;33mv0.1.1[m[33m, [m[1;33mtag: [m[1;33mv0.1.0[m[33m)[m Fix build
+[33m0436af1[m Fix typo
+[33mc76a9b1[m Fix typo
+[33me3e1b6e[m v0.1.6
+[33md304b4e[m Temporarily disable this test until CI build works properly
+[33m264ad70[m ci: Maven central deployment (#56)
+[33me5b2620[m Merge pull request #60 from llm4s/kannupriyakalra-poland
+[33m0518fc2[m[33m ([m[1;31mupstream/kannupriyakalra-poland[m[33m)[m added recording link for functional world talk
+[33ma7508d7[m Merge pull request #59 from elvankonukseven/patch-1
+[33mb95bc0f[m Add my work log to README.md
+[33mb5668cf[m Merge pull request #58 from llm4s/kannupriyakalra-social-media
+[33mff20eb1[m[33m ([m[1;31mupstream/kannupriyakalra-social-media[m[33m)[m Add social media and newsletter links to talk details
+[33m057de35[m Merge pull request #57 from llm4s/kannupriyakalra-gsoc
+[33m79bb09b[m[33m ([m[1;31mupstream/kannupriyakalra-gsoc[m[33m)[m added Gdansk Poland Talk details
+[33m7175bdb[m fixed formatting
+[33mdd9b4a6[m added contributor blog and work log links
+[33m0c5cb79[m fixed path
+[33m8528842[m added spaces
+[33m5bde0db[m added image for gsoc-llm4s
+[33mf620373[m Added image for GSoC llm4s selection
+[33mbd7fc03[m Merge pull request #55 from llm4s/kannupriyakalra-gsoc-onboarding
+[33md4ef81d[m[33m ([m[1;31mupstream/kannupriyakalra-gsoc-onboarding[m[33m)[m GSoC Contributor Onboarding Resources
+[33mc9c369a[m Update README.md - to add github user lings
+[33m6cb78e6[m added_contributors_details (#49)
+[33m3355412[m Move to a websocket based protocol for communication with containerised workspace runner to prevent heartbeat issues
+[33m53e1c57[m Improve CodeGen example logging and reliability
+[33mab3c5a2[m Reduce code duplication in tool calling examples
+[33m3f03da3[m Merge pull request #48 from elvankonukseven/main
+[33meb51c90[m Add Contributor blog section and add my blog's link
+[33m7d6a1de[m POC work on full front to back code generation example.   Fix OpenAI tool calling handling for optional fields and strict typing. (See  https://platform.openai.com/docs/guides/function-calling\#strict-mode).  Updated build image to include Scala/SBT and increased command run timeout.  Can now successfully run CodeGenExample and create real code
+[33m9074df9[m logo
+[33m7139765[m Cleanup/Refactoring:
+[33m273ba59[m Fixed a typo in the crosstest README.md link
+[33m5ebbace[m Merge pull request #42 from llm4s/kannupriyakalra-whyContribute
+[33m53bd6bd[m[33m ([m[1;31mupstream/kannupriyakalra-whyContribute[m[33m)[m Added "Why You Should Contribute to LLM4S?"
+[33m0c9e783[m Merge pull request #41 from llm4s/kannupriyakalra-documentation-update
+[33md4d403a[m[33m ([m[1;31mupstream/kannupriyakalra-documentation-update[m[33m)[m removed image subtext
+[33m2a8d175[m updated image
+[33mfd4e3d8[m Update README.md
+[33m3b119e3[m added llm4s overview image
+[33me6c742e[m Update README.md
+[33mac01b7c[m Enhance cross-version support and migrate to Scala 3
+[33m1d0faa1[m Update README.md
+[33mca33bb5[m Update README.md
+[33m040fed6[m Update README with basic setup instructions for running examples
+[33m33133dc[m More publishing fixes
+[33mba65a8a[m More publishing fixes
+[33mb7e50a8[m Update publishing configuration
+[33mb92d3b0[m release fixes
+[33mc631d86[m Disabled ScalaFmt to to try and address windows build issue
+[33ma03cc5b[m Update build dependencies to to and address windows test bug
+[33mb95a722[m Fix typo in build.sbt
+[33m89476a9[m Add GitHub Actions workflow for release and update sbt plugins for Maven deployment
+[33m9634102[m Update README.md
+[33mfb9a0c2[m Update README.md
+[33m90aed1d[m Merge pull request #37 from llm4s/kannupriyakalra-readme
+[33ma6fc89c[m Update README.md
+[33m3d785a9[m Update README.md
+[33m72d95f0[m Update sbt and ScalaFmt in hope of fixing windows coursier issue
+[33m0896d8e[m fixed host os error and other errors on windows
+[33m911265e[m First cut at github CI test (#33)
+[33m041d89f[m Add example to use API to perform summarization (#32)
+[33m3af302f[m Merge pull request #31 from elvankonukseven/main
+[33mf99d85a[m Adjust error message for llm model version
+[33m901d503[m Merge pull request #29 from dmamonov/anthropic
+[33mdf55856[m partial fix for anthropic tool calling (required/optional params are not separated)
+[33m9cff424[m Merge pull request #28 from dmamonov/tokens4
+[33m00750ff[m basic tokens functionality / attempt 4
+[33m15fa161[m gh-l Initial work on agentic loop.
+[33m3f886a1[m Update README.md
+[33meaae166[m Update README.md
+[33m776948e[m Key changes: 1. Update LLMConnect to return a new LLM wrapper which abstracts away from OpenAI impl. 2. Support creation of tools for use in tool calling with new LLMClient api. 3. Create tool calling example. 4. Added Antropic as a client option (not basic usage works, tool calling needs further investigation)
+[33mae52311[m Update workspace runner protocol and complete basic implementation of the workspace runner
+[33m2213860[m Initial implemention of containerised workspace to provide isolated execution environment
+[33mba8e680[m WIP
+[33m4788c9a[m chore: Move RunnerMainTest.scala to the correct directory structure
+[33m9196258[m chore: Move RunnerMainTest to the correct package directory
+[33ma0e84b8[m test: Add tests for execCommand method in RunnerMain class
+[33m1d465ea[m refactor: Rename endpoint from /do-thing to /execCommand
+[33md2623c6[m feat: Add error handling and JSON response for /do-thing endpoint
+[33m297c176[m feat: Update RunnerMain to handle command execution via new endpoint
+[33m9844f77[m feat: Implement CommandRunner with command execution and mock handlers
+[33m6cad3a5[m test: Add empty line for improved readability in ProtocolCodecTest.scala
+[33m95ba545[m feat: Add ScalaTest dependency to shared project build
+[33m2e931d7[m feat: Move ProtocolCodecTest to shared project directory
+[33m50ed8f9[m feat: Add ScalaTest dependency to build.sbt for testing support
+[33mbeffa3b[m test: Add tests for encoding and decoding commands in ProtocolCodec
+[33m6c391ec[m fix: Add missing comma in ReadWriter definition for ListDirectoryCommand
+[33mb4c9516[m fix: Separate ReadWriter instances for Request and Response objects
+[33m0df06ba[m fix: Close ExecShellResponse object with a closing brace
+[33m51485c7[m feat: Add ExecShellCommand and ExecShellResponse to Protocol.scala
+[33me889752[m feat: Add implicit ReadWriter for Request trait to fix compilation error
+[33med20b72[m feat: Add request and response models for directory listing commands
+[33mc684ffd[m feat: Rename ProtocolDecoder to ProtocolCodec and add encodeRequest method
+[33mbf3c71c[m feat: Create ProtocolDecoder to decode JSON into Request type
+[33m551c24e[m feat: Add command ID to requests and responses with ErrorResponse class
+[33m67ebb09[m #12 Initial work on boostrapping a rest endpoint inside a docker container for the runner
+[33m1fa3a0c[m Update README.md
+[33mfb26eba[m Seperate out components in build, fix doc issues
+[33m5d77ec0[m Fix docs, change package name
+[33m6819c2d[m Doc generation test
+[33ma507b0c[m Create CNAME
+[33m26356f1[m Create CNAME
+[33m1df0677[m Delete CNAME
+[33mbce9d7e[m Create CNAME
+[33m2045bde[m Add some colour to the readme
+[33m35609ee[m Initial wip code
+[33m352d4bd[m Update README.md
+[33mfa1aca0[m Initial base code calling an llm
+[33mf3b63b1[m Initial commit

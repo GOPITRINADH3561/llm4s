@@ -1,23 +1,29 @@
 package org.llm4s.llmconnect.config
 
+case class EmbeddingProviderConfig(
+                                    baseUrl: String,
+                                    model: String,
+                                    apiKey: String
+                                  )
+
 object EmbeddingConfig {
 
-  val openAIKey: String = sys.env.getOrElse(
-    "OPENAI_API_KEY", {
-      println("⚠️ OPENAI_API_KEY is not set. Using placeholder key.")
-      "invalid-key"
-    }
+  def loadEnv(name: String): String =
+    sys.env.getOrElse(name, throw new RuntimeException(s"Missing env variable: $name"))
+
+  val openAI: EmbeddingProviderConfig = EmbeddingProviderConfig(
+    baseUrl = loadEnv("OPENAI_EMBEDDING_BASE_URL"),
+    model   = loadEnv("OPENAI_EMBEDDING_MODEL"),
+    apiKey  = loadEnv("OPENAI_API_KEY")
   )
 
-  val voyageKey: String = sys.env.getOrElse(
-    "VOYAGE_API_KEY", {
-      println("⚠️ VOYAGE_API_KEY is not set. Using placeholder key.")
-      "invalid-key"
-    }
+  val voyage: EmbeddingProviderConfig = EmbeddingProviderConfig(
+    baseUrl = loadEnv("VOYAGE_EMBEDDING_BASE_URL"),
+    model   = loadEnv("VOYAGE_EMBEDDING_MODEL"),
+    apiKey  = loadEnv("VOYAGE_API_KEY")
   )
 
-  val openAIEndpoint: String = "https://api.openai.com/v1/embeddings"
-  val voyageEndpoint: String = "https://api.voyageai.com/v1/embeddings"
-  val openAIModel: String    = "text-embedding-3-small"
-  val voyageModel: String    = "voyage-2"
+  val activeProvider: String = loadEnv("EMBEDDING_PROVIDER") // e.g. "openai" or "voyage"
 }
+
+
