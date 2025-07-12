@@ -11,8 +11,6 @@ object PDFExtractor {
     try {
       val stripper = new PDFTextStripper()
       stripper.getText(doc)
-    } finally {
-      doc.close()
-    }
+    } finally doc.close()
   }
 }

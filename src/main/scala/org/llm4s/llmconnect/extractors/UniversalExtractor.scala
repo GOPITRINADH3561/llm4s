@@ -1,7 +1,7 @@
 package org.llm4s.llmconnect.extractors
 
 object UniversalExtractor {
-  def extract(pathOrUrl: String): String = {
+  def extract(pathOrUrl: String): String =
     if (pathOrUrl.startsWith("http://") || pathOrUrl.startsWith("https://")) {
       WebExtractor.extractText(pathOrUrl)
     } else if (pathOrUrl.endsWith(".pdf")) {
@@ -15,5 +15,4 @@ object UniversalExtractor {
     } else {
       throw new RuntimeException(s"Unsupported file type: $pathOrUrl")
     }
-  }
 }
