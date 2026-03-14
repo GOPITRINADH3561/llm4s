@@ -47,7 +47,7 @@ final class LLMQueryRewriter(
       .map { error =>
         ProcessingError(
           "query-rewrite",
-          s"Failed to rewrite query: ${error.message}"
+          s"Failed to rewrite query: ${error.formatted}"
         )
       }
   }

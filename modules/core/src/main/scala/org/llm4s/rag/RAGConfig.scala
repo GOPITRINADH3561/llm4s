@@ -63,13 +63,13 @@ final case class RAGConfig(
   systemPrompt: Option[String] = None,
   // Observability
   tracer: Option[Tracing] = None,
-  // Pre-retrieval query transforms
-  queryTransformers: Seq[QueryTransformer] = Seq.empty,
   // Document loading
   documentLoaders: Seq[DocumentLoader] = Seq.empty,
   loadingConfig: LoadingConfig = LoadingConfig.default,
   // Permission-based search index (for enterprise RAG)
-  searchIndex: Option[SearchIndex] = None
+  searchIndex: Option[SearchIndex] = None,
+  // Pre-retrieval query transforms
+  queryTransformers: Seq[QueryTransformer] = Seq.empty
 ) {
 
   // ========== Embedding Configuration ==========

@@ -18,6 +18,7 @@ class LLMQueryRewriterSpec extends AnyFlatSpec with Matchers {
 
   private class MockLLMClient(response: String) extends LLMClient {
     var lastConversation: Option[Conversation] = None
+    var lastOptions: Option[CompletionOptions] = None
     var callCount: Int                         = 0
 
     override def complete(
@@ -26,6 +27,7 @@ class LLMQueryRewriterSpec extends AnyFlatSpec with Matchers {
     ): Result[Completion] = {
       callCount += 1
       lastConversation = Some(conversation)
+      lastOptions = Some(options)
       Right(
         Completion(
           id = s"mock-${System.currentTimeMillis()}",
@@ -133,8 +135,8 @@ class LLMQueryRewriterSpec extends AnyFlatSpec with Matchers {
     val rewriter = LLMQueryRewriter(mock)
 
     rewriter.transform("test")
-    // We can verify the client was called — temperature is set in CompletionOptions
     mock.callCount shouldBe 1
+    mock.lastOptions.get.temperature shouldBe 0.0
   }
 
   // ==========================================================================
