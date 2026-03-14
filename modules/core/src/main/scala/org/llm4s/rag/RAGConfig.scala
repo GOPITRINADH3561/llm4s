@@ -6,6 +6,7 @@ import org.llm4s.rag.loader.{ DirectoryLoader, DocumentLoader, LoadingConfig }
 import org.llm4s.rag.permissions.SearchIndex
 import org.llm4s.trace.Tracing
 import org.llm4s.vectorstore.FusionStrategy
+import org.llm4s.rag.transform.QueryTransformer
 
 /**
  * Configuration for RAG pipeline.
@@ -62,6 +63,8 @@ final case class RAGConfig(
   systemPrompt: Option[String] = None,
   // Observability
   tracer: Option[Tracing] = None,
+  // Pre-retrieval query transforms
+  queryTransformers: Seq[QueryTransformer] = Seq.empty,
   // Document loading
   documentLoaders: Seq[DocumentLoader] = Seq.empty,
   loadingConfig: LoadingConfig = LoadingConfig.default,
@@ -262,6 +265,27 @@ final case class RAGConfig(
   /** Enable tracing for cost tracking and observability */
   def withTracing(tracer: Tracing): RAGConfig =
     copy(tracer = Some(tracer))
+
+  // ========== Pre-Retrieval Query Transform Configuration ==========
+
+  /**
+   * Add a query transformer for pre-retrieval processing.
+   *
+   * Transforms are applied sequentially before embedding.
+   * Multiple transforms can be chained.
+   *
+   * @param transformer The query transformer to add
+   */
+  def withQueryTransformer(transformer: QueryTransformer): RAGConfig =
+    copy(queryTransformers = queryTransformers :+ transformer)
+
+  /**
+   * Set all query transformers, replacing any existing ones.
+   *
+   * @param transformers The complete list of transformers
+   */
+  def withQueryTransformers(transformers: Seq[QueryTransformer]): RAGConfig =
+    copy(queryTransformers = transformers)
 
   // ========== Document Loading Configuration ==========
 
